@@ -8,3 +8,4 @@ jQuery ->
     xkey: 'created_at'
     ykeys: ['yes', 'no']
     labels: ['Yes', 'No']
+    postUnits: ' Votes'
