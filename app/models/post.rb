@@ -3,7 +3,6 @@ class Post < ActiveRecord::Base
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :mail, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-  validates :ip_address, uniqueness: { case_sensitive: true }
 
   def self.chart_data(start = 3.weeks.ago)
     total_votes = votes_by_day(start)
