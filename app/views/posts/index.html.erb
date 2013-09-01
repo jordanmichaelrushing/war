@@ -1,0 +1,18 @@
+<div class="outtie">
+  <div class="innie">
+    <div class="row">
+      <div class="span9 offset2">
+        <h1>Thank You!</h1>
+        <h4>Here's what the nation thinks so far...</h4>
+        <%= content_tag :div, "", id: "votes_chart", data: {posts: posts_chart_data} %><br>
+        <h4>Total Percentage of Yeses:</h4>
+        <h5>
+        <%= @ytotal %>%</h5>
+        <br>
+        <h4>Total percentage of Noes:</h4>
+        <h5>
+        <%= @ntotal %>%</h5>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <h1>Should We Have A Military Strike On Syria?</h1>
+          <h4>
+            <%= f.radio_button :strike, "yes" %>Yes<br>
+            <%= f.radio_button :strike, "no" %>No<br  />
+            <%= f.hidden_field :ip_address, value: request.remote_ip %>
+          </h4>
+          <h1>Enter Your Email Address</h1>
+          <div class="span4">
+            <%= f.text_field :mail, id: "the-form"%><br>
+          </div>
+          <h4>We will NOT: email you, sell your email address or any other such actions with your email address. We are only using this to make sure 1 vote per email address</h4>
+          <br><br><br>
+          <%= f.submit "Submit Questionaire", class: "btn btn-big btn-primary" %>
+<% end %>
